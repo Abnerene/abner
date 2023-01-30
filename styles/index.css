@@ -1,0 +1,69 @@
+html,body{
+    font-family: 'Hanken Grotesk', sans-serif;
+    box-sizing: border-box;
+    margin: 0px;
+    border: 0px;
+
+}
+  body{
+    display: flex;
+    width: 100vw;
+  }
+
+  h1{
+    font-size: 10vh;
+    line-height: 1;
+  }
+
+  h2{
+    font-size: 5vh;
+    
+  }
+
+  h3{
+    font-size: 2vh;
+    
+  }
+  .left-content{
+    width: 50%;
+    box-sizing: border-box; 
+    padding: 5%;
+
+  }
+  .right-content{
+    width: 50%;
+    box-sizing: border-box;
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .lh-5{
+    line-height: .5;
+  }
+  .lh1{
+    line-height: 1;
+  }
+
+  .lh1-2{
+    line-height: 1.2;
+  }
+
+  .lh1-5{
+    line-height: 1.5;
+  }
+
+  .block-generic{
+    width: 50%;
+    border: 1px solid black;
+    box-sizing: border-box;
+    padding: 5%;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin: 5px;
+  }
+
+  .head-block-project{
+    line-height: 1;
+  }

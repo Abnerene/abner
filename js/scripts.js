@@ -54,8 +54,9 @@ function lineAnimation(element){
 
 }
 
-var lastBlock=false;
+var lastBlock = false;
 
+var lastBuild = false
 function hiddeContent(){
     element = lastBlock;
     const scroll = document.querySelector('.right-content').scrollTop
@@ -110,7 +111,7 @@ function hiddeContent(){
 const blocks = Array.from(document.getElementsByClassName('block-generic'));
 blocks.forEach( block => {
     block.addEventListener('click', function handleClick(){
-        loadContent(block.getAttribute('build'));
+        loadContent(block.getAttribute('build'),this.getAttribute('build'));
         lineAnimation(block)
        
     })
@@ -120,21 +121,30 @@ blocks.forEach( block => {
 const CONTAINER1 = document.getElementById('container-1');
 
 
-async function loadContent(pathContent){
+async function loadContent(pathContent,build){
     const fullPath= `build/${pathContent}.html`
+    
+    
 
     const content = await fetch(fullPath).then(function (response) {
         // The API call was successful!
         return response.text();
     }).then(function (html) {
         // This is the HTML from our response as a text string
-        
+            
         CONTAINER1.innerHTML = html
-
+        if(lastBuild !== build){
+            console.log('change')
+            CONTAINER1.scrollTop = '0px'
+        }else{
+            console.log('same')
+        }
     }).catch(function (err) {
         // There was an error
         console.warn('Something went wrong.', err);
     });
+
+    lastBuild = build
      
 }
 

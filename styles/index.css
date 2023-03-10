@@ -40,7 +40,7 @@ html,body{
     font-size: 2vh;
   }
 
-  
+
   .left-content{
     width: 50%;
     box-sizing: border-box; 
@@ -56,6 +56,11 @@ html,body{
     flex-wrap: wrap;
     height: 100vh;
     overflow-y: scroll;
+  }
+
+  .center1{
+    display: inline-flex;
+    align-content: center;
   }
 
   .lh1-0{

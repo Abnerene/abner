@@ -36,6 +36,11 @@ html,body{
     font-size: 5vh;
   }
 
+  .f2-5{
+    font-size: 2.5vh;
+  }
+
+
   .f3{
     font-size: 2vh;
   }
@@ -172,8 +177,15 @@ html,body{
     background-color: #EEEEF6;
   }
 
+  .BGpurple1{
+   background-color: #7D57FF; 
+  }
+
   .white{
     color: white;
+  }
+  .black{
+    color: black;
   }
   .project-logo{
     display: flex;

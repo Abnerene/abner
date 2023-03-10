@@ -136,7 +136,21 @@ async function loadContent(pathContent){
         console.warn('Something went wrong.', err);
     });
      
-    
-    
+}
 
+
+function rewindVideo(video){
+    const actual = video.getAttribute('actual')
+    const rewind = video.getAttribute('rewind')
+    const original = video.getAttribute('original')
+    console.log(video.src)
+    if(actual !== rewind){
+        video.src = rewind
+        video.setAttribute('actual',rewind)
+    }else{
+        video.src = original
+        video.setAttribute('actual',original)
+
+    }
+    video.play()
 }

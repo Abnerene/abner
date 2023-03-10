@@ -145,6 +145,10 @@ html,body{
     margin: 0PX !important;
   }
 
+  .w20{
+    width: 20%;
+  }
+
   .w25{
     width: 25%;
   }
@@ -249,6 +253,10 @@ html,body{
 
 .border1{
     border-radius: 55px;
+}
+
+.border2{
+  border-radius: 30px;
 }
 
 

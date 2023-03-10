@@ -15,6 +15,7 @@ html,body{
   h1{
     font-size: 10vh;
     line-height: 1;
+
   }
 
   h2{
@@ -26,6 +27,20 @@ html,body{
     font-size: 2vh;
     
   }
+
+  .f1{
+    font-size: 10vh;
+  }
+
+  .f2{
+    font-size: 5vh;
+  }
+
+  .f3{
+    font-size: 2vh;
+  }
+
+  
   .left-content{
     width: 50%;
     box-sizing: border-box; 
@@ -44,7 +59,7 @@ html,body{
   }
 
   .lh1-0{
-    line-height: 0;
+    line-height: 0 !important;
   }
 
   .lh-5{
@@ -79,7 +94,7 @@ html,body{
     line-height: .5;
   }
 
-  #animation-line{
+  #container-1{
     position: fixed;
     width: 100vw;
     height: 10px;
@@ -87,7 +102,38 @@ html,body{
     position:fixed;
     border:2px solid black;
     border-radius: 5px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
 
+  #container-1 .inside-container{
+    transition: 1.2s;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+  }
+
+  .noMargin{
+    margin: 0PX !important;
+  }
+
+  .w50{
+    width: 50%;
+  }
+
+  .w100{
+    width: 100%;
+  }
+  .mg5p{
+    margin: 5%;
+  }
+  .pd5p{
+    padding: 5%;
+  }
+
+  .pd10p{
+    padding: 5% 10%;
   }
 
   .blur{
@@ -98,8 +144,108 @@ html,body{
   }
 
   .no-blur{
-    transition: .4s;
+    transition: .6s;
     backdrop-filter: blur(0px);
     -webkit-backdrop-filter: blur(0px);
     background-color: aliceblue; 
   }
+
+
+  .BGorange{
+    background-color: #E85913;
+  }
+
+  .BGwhite{
+    background-color: white;
+  }
+
+  .BGblack{
+    background-color: black;
+  }
+
+  .BGgrey{
+    background-color: #EEEEF6;
+  }
+
+  .white{
+    color: white;
+  }
+  .project-logo{
+    display: flex;
+  }
+  .project-logo .company-logo{
+    margin-left: .5%;
+  }
+
+  .project-logo img{
+    width: 7vh ;
+    height: 7vh;
+    border-radius: 1px;
+    /* -webkit-box-shadow: 0px 0px 104px -16px rgba(0,0,0,0.36);
+    -moz-box-shadow: 0px 0px 104px -16px rgba(0,0,0,0.36);
+    box-shadow: 0px 0px 104px -16px rgba(0,0,0,0.36); */
+    border-radius: 10px;
+  }
+
+.light{
+    font-weight: 300;
+}
+
+.sha1{
+
+}
+
+.f-Poppins{
+    font-family: 'Poppins', sans-serif;
+}
+
+.bbox{
+    box-sizing: border-box;
+}
+
+.border1{
+    border-radius: 55px;
+}
+
+
+.scroll::-webkit-scrollbar-thumb:hover {
+    background:transparent !important;
+  }
+  
+  
+.scroll::-webkit-scrollbar {
+    width: 0px !important;
+    height:  0px !important;
+  
+  }
+  
+  /* Track */
+.scroll::-webkit-scrollbar-track {
+    background: transparent !important;
+    
+}
+  
+  /* Handle */
+.scroll::-webkit-scrollbar-thumb {
+    background:transparent !important;
+    height:  0px !important;    
+    border-radius: 0px !important;
+     height: 0vw !important;
+}
+  
+  /* Handle on hover */
+.scroll::-webkit-scrollbar-thumb:hover {
+    background:transparent !important;
+    height:  0px !important;
+  
+}
+  
+.scroll{
+     scrollbar-color: transparent transparent;
+     scrollbar-width: thin;
+}
+
+
+.dFlex{
+  display: inline-flex;
+}

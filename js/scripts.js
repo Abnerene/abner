@@ -5,9 +5,8 @@ function lineAnimation(element){
     const width = element.clientWidth
     const top = element.offsetTop - scroll
     const left =  element.offsetLeft;
-    console.log(element.offsetWidth, element.offsetLeft)
     const heigth = element.offsetHeight
-    line = document.getElementById('animation-line')
+    line = document.getElementById('container-1')
     // console.log(top)
     line.setAttribute('style',`
         display:inline-flex;
@@ -24,6 +23,7 @@ function lineAnimation(element){
         width:100vw;
         left:0px;
         `)
+        
     },400)
 
     setTimeout(function(){
@@ -34,19 +34,23 @@ function lineAnimation(element){
         width:100vw;
         left:0px;
         `)
+       
     },800)
 
     setTimeout(function(){
-        line.setAttribute('class',element.ClassName+"  blur")
+        line.querySelector('.inside-container').style.opacity = 1
+        line.setAttribute('class',"scroll  blur")
         line.setAttribute('style',`
         transition:.6s;
         top:0px;
         height:100vh;
         width:100vw;
         left:0px;
+        border:0px;
         `)
 
     },1200)
+    line.style.borderRadius="0px !important"
 
 }
 
@@ -58,9 +62,11 @@ function hiddeContent(){
     const width = element.clientWidth
     const top = element.offsetTop - scroll
     const left =  element.offsetLeft;
-    console.log(element.offsetWidth)
+    
     const heigth = element.offsetHeight
-    line = document.getElementById('animation-line')
+    line = document.getElementById('container-1')
+    line.querySelector('.inside-container').style.opacity = 0
+
     // console.log(top)
     line.setAttribute('style',`
         display:inline-flex;
@@ -80,15 +86,16 @@ function hiddeContent(){
     },400)
 
     setTimeout(function(){
-        line.setAttribute('class',element.ClassName+"no-blur")
+        line.setAttribute('class',"scroll")
         line.setAttribute('style',`
         transition:.6s;
         top:${top}px;
         height:${heigth}px;
         width:${width}px;
         left:${left}px;
-        
         `)
+        line.style.borderRadius="5px"
+
     },800)
 
     setTimeout(function(){
@@ -103,7 +110,33 @@ function hiddeContent(){
 const blocks = Array.from(document.getElementsByClassName('block-generic'));
 blocks.forEach( block => {
     block.addEventListener('click', function handleClick(){
+        loadContent(block.getAttribute('build'));
         lineAnimation(block)
+       
     })
 
 })
+
+const CONTAINER1 = document.getElementById('container-1');
+
+
+async function loadContent(pathContent){
+    const fullPath= `build/${pathContent}.html`
+
+    const content = await fetch(fullPath).then(function (response) {
+        // The API call was successful!
+        return response.text();
+    }).then(function (html) {
+        // This is the HTML from our response as a text string
+        
+        CONTAINER1.innerHTML = html
+
+    }).catch(function (err) {
+        // There was an error
+        console.warn('Something went wrong.', err);
+    });
+     
+    
+    
+
+}

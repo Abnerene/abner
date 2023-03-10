@@ -68,6 +68,23 @@ html,body{
     align-content: center;
   }
 
+  .center2{
+    display: inline-flex;
+    align-content: center;
+    justify-content: center;
+  }
+
+  .center2{
+    display: inline-flex;
+    justify-content: center;
+  }
+  
+  .center4{
+    display: inline-flex;
+    align-content: center;
+    justify-content: space-around;
+  }
+
   .lh1-0{
     line-height: 0 !important;
   }
@@ -126,6 +143,14 @@ html,body{
 
   .noMargin{
     margin: 0PX !important;
+  }
+
+  .w25{
+    width: 25%;
+  }
+
+  .w30{
+    width: 30%;
   }
 
   .w50{
@@ -209,7 +234,9 @@ html,body{
 }
 
 .sha1{
-
+  box-shadow: 0px 0px 115px 5px rgba(0,0,0,0.11);
+-webkit-box-shadow: 0px 0px 115px 5px rgba(0,0,0,0.11);
+-moz-box-shadow: 0px 0px 115px 5px rgba(0,0,0,0.11);
 }
 
 .f-Poppins{

@@ -143,7 +143,7 @@ function rewindVideo(video){
     const actual = video.getAttribute('actual')
     const rewind = video.getAttribute('rewind')
     const original = video.getAttribute('original')
-    console.log(video.src)
+    
     if(actual !== rewind){
         video.src = rewind
         video.setAttribute('actual',rewind)

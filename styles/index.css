@@ -5,6 +5,7 @@ html,body{
     border: 0px;
     height: 100vh;
     overflow:hidden ;
+    user-select: none;
 
 }
   body{
@@ -107,6 +108,7 @@ html,body{
 
 
   .block-generic{
+    transition: .4s;
     width: 50%;
     border: 1px solid black;
     box-sizing: border-box;
@@ -115,7 +117,16 @@ html,body{
     cursor: pointer;
     display: block;
     margin: 5px;
+    background-color: white;
   }
+
+  .block-generic:hover{
+    transition: .6s;
+    filter: invert(100%);
+  }
+
+
+  
 
   .head-block-project{
     line-height: .5;

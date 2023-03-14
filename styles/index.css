@@ -6,11 +6,41 @@ html,body{
     height: 100vh;
     overflow:hidden ;
     user-select: none;
+   
 
 }
   body{
     display: flex;
     width: 100vw;
+  }
+
+  a{
+    text-decoration: none;
+    offset: unset;
+  }
+
+  button{
+    transition: .4s;
+    border: none;
+    cursor: pointer;
+    /* display: inline-flex; */
+    background-color: transparent;
+  }
+
+
+
+  button img{
+    width: 16px;
+  }
+
+  button span{
+    margin-left: 5px;
+  }
+
+  .basic-button{
+    padding: 10px 20px;
+    border-radius: 50px;
+    /* display: inline-block; */
   }
 
   h1{
@@ -52,6 +82,7 @@ html,body{
     box-sizing: border-box; 
     padding: 5%;
     height: 100vh;
+    /* background-color: #E85913; */
 
   }
   .right-content{
@@ -60,8 +91,12 @@ html,body{
     padding: 5%;
     display: flex;
     flex-wrap: wrap;
+    /* flex-direction:; */
     height: 100vh;
     overflow-y: scroll;
+    /* background-color: rebeccapurple; */
+    width: 50%;
+    scroll-behavior: smooth;
   }
 
   .center1{
@@ -109,7 +144,7 @@ html,body{
 
   .block-generic{
     transition: .4s;
-    width: 50%;
+    width: 45%;
     border: 1px solid black;
     box-sizing: border-box;
     padding: 5%;
@@ -311,4 +346,8 @@ html,body{
 
 .dFlex{
   display: inline-flex;
+}
+
+.invert{
+  filter: invert(100%);
 }

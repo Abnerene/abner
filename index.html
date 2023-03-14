@@ -7,6 +7,8 @@
         <link href="https://fonts.googleapis.com/css?family=Hind+Vadodara:600|Poppins:300,400,500,600" rel="stylesheet">
 
         <link rel="stylesheet" href="styles/index.css">
+        <link rel="stylesheet" href="styles/home.css">
+
     </head>
     <body class="scroll">
         <section class="left-content">
@@ -14,58 +16,82 @@
             <p class="l1-5 f2-5">
                 I am a software developer with over 8 years loving developing, testing and deploying web applications. I have a solid knowledge of Python, PHP, JavaScript, HTML and SQL programming languages. My professional goals are to develop state-of-the-art web applications and stay on the cutting edge of technological development.
             </p>
+            <div class="dFlex link-buttons-container">
+                <a href="https://docs.google.com/document/d/1gfqtpD2sjSIC3Z94RG4OBq_CQSrl3a0wQYZvdhg5_Ws/edit?usp=sharing" target="_blank">
+                    <button class="basic-button BGwhite black f3" hover="invert">
+                        <img src="static/icons/resume.png">
+                        <span>Resume</span>
+                    </button>
+                </a>
+                <a href="https://www.linkedin.com/in/barriosrene/" target="_blank">
+                    <button class="basic-button BGwhite black f3" hover="invert">
+                        <img src="https://cdn-icons-png.flaticon.com/512/3536/3536569.png"> 
+                        <span>Contact me</span>
+                    </button>
+                </a>
+            </div><br>
             <nav>
-                <!-- <li>
-                    <label><input type="radio" name="option"> Projects </label>
+                <li class="category active f2-5" onclick="activeContent(this,'category')">  
+                    <a href="#projects">         
+                        <label>PROJECTS </label>
+                        <div class="category-line-bar"></div>
+                    </a>
                 </li>
 
-                <li>
-                    <label><input type="radio" name="option"> Just Coding </label>
+                <li class="category f2-5" onclick="activeContent(this,'category')">
+                    <label>JUST CODING</label> 
+                    <div class="category-line-bar"></div>
                 </li>
 
-                <li>
-                    <label><input type="radio" name="option"> Certificates </label>
-                </li> -->
+                <li class="category f2-5" onclick="activeContent(this,'category')">
+                    <label>CERTIFICATES</label>
+                    <div class="category-line-bar"></div>
+                </li>
              
             </nav>
         </section>
         
-        <section class="right-content scroll">
-      
-        <article class="block-generic" build="projects/sofia">
-            <div class="head-block-project">
-                <h3>Full Stack Developer</h3>
-                <h3>Mexico</h3>
-                <h3>Jun 2019 - Dec 2022</h3>
-            </div>
-            <h2>SOFIA</h2>
-            <h3 class="lh-0">for PhotoLeón</h3>
-            <h3></h3>
-        </article>
+        <section  class="right-content scroll">
+       
+            <article class="block-generic" build="projects/sofia" id="projects">
+                <div class="head-block-project">
+                    <h3>Full Stack Developer</h3>
+                    <h3>Mexico</h3>
+                    <h3>Jun 2019 - Dec 2022</h3>
+                </div>
+                <h2>SOFIA</h2>
+                <h3 class="lh-0">for PhotoLeón</h3>
+                <h3></h3>
+            </article>
 
-        <article class="block-generic" build="projects/myphotos">
-            <div class="head-block-project">
-                <h3>Full Stack Developer</h3>
-                <h3>Mexico</h3>
-                <h3>Jun 2019 - Dec 2022</h3>
-            </div>
-            <h2>MyPhotos</h2>
-            <h3 class="lh-0">for PhotoLeón</h3>
-            <h3></h3>
-        </article>
+            <article class="block-generic" build="projects/myphotos">
+                <div class="head-block-project">
+                    <h3>Full Stack Developer</h3>
+                    <h3>Mexico</h3>
+                    <h3>Jun 2019 - Dec 2022</h3>
+                </div>
+                <h2>MyPhotos</h2>
+                <h3 class="lh-0">for PhotoLeón</h3>
+                <h3></h3>
+            </article>
 
-        <article class="block-generic" build="projects/vino">
-            <div class="head-block-project">
-                <h3>Full Stack Developer</h3>
-                <h3>Mexico</h3>
-                <h3>Sep 2020 - Dec 2021</h3>
-            </div>
-            <h2>Vino App</h2>
-            <h3 class="lh-0">for VinoDelivery</h3>
-            
-        </article>
+            <article class="block-generic" build="projects/vino">
+                <div class="head-block-project">
+                    <h3>Full Stack Developer</h3>
+                    <h3>Mexico</h3>
+                    <h3>Sep 2020 - Dec 2021</h3>
+                </div>
+                <h2>Vino App</h2>
+                <h3 class="lh-0">for VinoDelivery</h3>          
+            </article>
+ 
+          
+        </section>
+       
+
+
+  
     
-    </section>
     <div onclick="hiddeContent()" id="container-1" style="display: none;" class="scroll">     
     </div>
   

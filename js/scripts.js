@@ -164,3 +164,42 @@ function rewindVideo(video){
     }
     video.play()
 }
+
+
+function activeContent(element,classElement){
+    const elements = document.getElementsByClassName(classElement)
+    for (let i = 0; i < elements.length; i++) {
+        let e = elements[i]
+        if(e!=element){
+            e.classList.remove('active')
+        }
+    }
+    element.classList.add('active')
+}
+
+
+function button(event){
+    console.log(event)
+}
+
+let BUTTONS =Array.from(document.getElementsByTagName('button'))
+
+BUTTONS.forEach(button =>{
+    const  hoverAttributes = button.getAttribute('hover')
+    
+   
+    if(hoverAttributes!=null){
+        console.log(hoverAttributes.split(','))
+        button.addEventListener('mouseover', function handleClick(){
+            button.classList.add(...hoverAttributes.split(',') )
+        })
+    }
+
+    if(hoverAttributes!=null){
+        console.log(hoverAttributes.split(','))
+        button.addEventListener('mouseout', function handleClick(){
+            button.classList.remove(...hoverAttributes.split(',') )
+        })
+    }
+
+})

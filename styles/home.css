@@ -23,9 +23,7 @@ li:hover{
 .link-buttons-container{
     /* background-color: aqua; */
     width: auto;
-}
-.link-buttons-container button:last-of-type {
-    margin-left: 10px;
+    gap: 10px;
 }
 
 .category{

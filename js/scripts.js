@@ -178,9 +178,6 @@ function activeContent(element,classElement){
 }
 
 
-function button(event){
-    console.log(event)
-}
 
 let BUTTONS =Array.from(document.getElementsByTagName('button'))
 
@@ -192,6 +189,13 @@ BUTTONS.forEach(button =>{
         console.log(hoverAttributes.split(','))
         button.addEventListener('mouseover', function handleClick(){
             button.classList.add(...hoverAttributes.split(',') )
+        })
+    }
+
+    if(hoverAttributes!=null){
+        console.log(hoverAttributes.split(','))
+        button.addEventListener('mouseout', function handleClick(){
+            button.classList.remove(...hoverAttributes.split(',') )
         })
     }
 
